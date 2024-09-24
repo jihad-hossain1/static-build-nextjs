@@ -1,14 +1,3 @@
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-```
-
-#### add ``` server.js ```file on main folder
-```
 const { createServer } = require("http");
 const { parse } = require("url");
 const next = require("next");
@@ -43,31 +32,3 @@ app.prepare().then(() => {
       console.log(`> Ready on http://${hostname}:${port}`);
     });
 });
-
-```
-
-#### add this line on ```package.json```
-```
-"scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
-  },
-
-```
-
-#### add this code on ```next.config.mjs```
-
-```
-const nextConfig = {
-    output: "export",
-};
-```
-
-
-# then
-```
-npm run build
-```
-
